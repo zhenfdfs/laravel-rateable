@@ -9,7 +9,7 @@ trait Rateable
      */
     public function ratings()
     {
-        return $this->morphMany('willvincent\Rateable\Rating', 'rateable');
+        return $this->morphMany('willvincent\Rateable\Rating', 'rateable')->select(['rating_item','rating','review']);
     }
 
     public function averageRating()
